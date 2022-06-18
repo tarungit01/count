@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        #counter{
+        background-color: lightblue;
+        width: 50%;
+        height: 500px;
+        margin: auto;
+        }
+
+        #counter h1{
+        text-align: center;
+        padding-top: 100px;
+        }
+
+        button{
+        text-align: center;
+        padding: 10px;
+        margin-left: 100px;
+        width: 120px;
+        }
+        #count{
+        text-align: center;
+        font-size: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div id="counter">
+        <h1>Counter</h1>
+        <p id="count"></p>
+        <button onClick="increase()" id="increment">Increase</button>
+        <button onClick="decrease()" id="decrement">Decrease</button>
+        <button onClick="reset()" id="reset">Reset</button>
+      </div>
+
+
+    <script>
+        var count = 0;
+        document.getElementById('count').innerText = count;
+        function increase(){
+        count = count + 1;
+        document.getElementById('count').innerText = count;
+        }
+        function decrease(){
+        count = count - 1;
+        document.getElementById('count').innerText = count;
+        }
+
+        function reset(){
+        count = count - count;
+        document.getElementById('count').innerText = count;
+        }
+    </script>
+</body>
+</html>
